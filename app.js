@@ -53,9 +53,13 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function sumAndMultiply(a, b, c) {
   //eslint-disable-line
-  var sumAll = a + b + c;
-  var multiAll = a * b * c;
-  return [sumAll, multiAll, a + ' and ' + b + ' and ' + c + ' sum to ' + sumAll + '.', 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + multiAll + '.'];
+    var sumTotal1 = sum(a, b);
+    var sumTotal2 = sum(sumTotal1[0], c);
+    var multi1 = multiply(a, b);
+    var multi2 = multiply(multi1[0], c);
+    var message1 = a + ' and ' + b + ' and ' + c + ' sum to ' + sumTotal2[0] + '.';
+    var message2 = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + multi2[0] + '.';
+  return [sumTotal2[0], multi2[0], message1, message2];
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
@@ -78,6 +82,11 @@ var testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(testArray) {
   //eslint-disable-line
+  var addAll = 0;
+  for (i = 0; i < testArray.length; i++) {
+    addAll = sum(testArray.length[], )
+  }
+  return []
 }
 
 // Here is the test for sumArray(); uncomment it to run it
